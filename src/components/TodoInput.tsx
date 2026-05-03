@@ -1,15 +1,8 @@
 import { createContext, useState } from "react";
+import type { Todo, TodoContextType } from "../types/Todo";
+import { TodoList } from "./TodoList";
 
 
-type Todo = {
-    id : number;
-    text : string;
-    completed : boolean;
-}
-
-type TodoContextType ={
-    todos : Todo[];
-}
  export const TodoContext = createContext<TodoContextType | undefined>(undefined);
 
 const TodoInput = () =>{
@@ -47,11 +40,7 @@ const TodoInput = () =>{
             >
             Add Todo
             </button>
-            {
-                todos.map((todo) => 
-                <p key= {todo.id}>{todo.text}</p>
-                )
-            }
+           <TodoList todos ={todos}/>
         </div>
     )
 }
