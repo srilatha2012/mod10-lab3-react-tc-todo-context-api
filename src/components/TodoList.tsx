@@ -1,12 +1,14 @@
-import type { TodoListProp } from "../types/Todo";
+import { useTodos } from "../contexts/TodoContext";
+import { TodoItem } from "./TodoItem";
 
-export function TodoList({ todos }: TodoListProp) {
+export function TodoList() {
+    const {todos} = useTodos();
     return (
         <div>
             {
-                todos.map((todo) =>
-                    <p key={todo.id}>{todo.text}</p>
-                )
+                todos.map((todo) => (
+                    <TodoItem key ={todo.id} todo ={todo}/>
+                ))
             }
         </div>
     )

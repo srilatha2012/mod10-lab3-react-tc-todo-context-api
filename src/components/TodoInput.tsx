@@ -11,7 +11,9 @@ const TodoInput = () => {
         setTodoInput(e.target.value);
 
     }
-    function addTodoHandler() {
+    function addTodoHandler(e: React.FormEvent) {
+        e.preventDefault();
+
         if (todoInput.trim() === "") return;
         addTodo(todoInput)
 
