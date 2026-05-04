@@ -13,10 +13,17 @@ export type TodoContextType ={
     clearCompleted : () => void;
 }
 
-export type TodoListProp ={
-    todos : Todo[];
-}
+export type Filter = "all" | "active" | "completed";
 
-export type TodoItemProp = {
-    todo : Todo;
-}
+export type FilterContextType ={
+   filter : Filter;
+   setFilter : (filter: Filter) => void;
+};
+
+// export type TodoListProp ={
+//     todos : Todo[];
+// }
+
+// export type TodoItemProp = {
+//     todo : Todo;
+// }
