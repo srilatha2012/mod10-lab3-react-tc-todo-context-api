@@ -1,4 +1,4 @@
-import { createContext, useContext, useState, type ReactNode } from "react";
+import { createContext, useContext, useState} from "react";
 import type {Filter, FilterContextType} from "../types/Todo"
 
 const FilterContext = createContext<FilterContextType | undefined>(undefined);

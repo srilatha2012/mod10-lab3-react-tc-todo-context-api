@@ -20,6 +20,13 @@ export type FilterContextType ={
    setFilter : (filter: Filter) => void;
 };
 
+export type Theme = "light" | "dark";
+
+export type ThemeContextType = {
+  theme: Theme;
+  toggleTheme: () => void;
+};
+
 // export type TodoListProp ={
 //     todos : Todo[];
 // }
