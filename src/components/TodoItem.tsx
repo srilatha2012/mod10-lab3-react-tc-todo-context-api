@@ -38,6 +38,8 @@ export function TodoItem({ todo }: TodoItemProp) {
 
             <button onClick={() => deleteTodo(todo.id)}>Delete</button>
 
+            
+
         </div>
 
     )
