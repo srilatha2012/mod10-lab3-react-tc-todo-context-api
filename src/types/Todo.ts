@@ -27,10 +27,10 @@ export type ThemeContextType = {
   toggleTheme: () => void;
 };
 
-// export type TodoListProp ={
-//     todos : Todo[];
-// }
+export type TodoListProp ={
+    todos : Todo[];
+}
 
-// export type TodoItemProp = {
-//     todo : Todo;
-// }
+export type TodoItemProp = {
+    todo : Todo;
+}
